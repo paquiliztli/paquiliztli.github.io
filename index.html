@@ -127,44 +127,32 @@
       background: var(--border);
     }
 
-    .tiles {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    .tile {
-      aspect-ratio: 1 / 1;
+    .social-row {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 28px;
+      padding: 4px 0 0;
+    }
+
+    .social-icon {
+      display: inline-flex;
       color: var(--text-main);
-      background: var(--item-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       text-decoration: none;
-      box-shadow: var(--shadow-soft);
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+      transition: transform .16s ease, color .16s ease;
     }
 
-    .tile:hover {
+    .social-icon:hover {
+      color: var(--accent);
       transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: var(--shadow-soft), 0 0 14px rgba(20, 184, 166, .22);
     }
 
-    .tile:focus-visible {
+    .social-icon:focus-visible {
       outline: 2px solid var(--focus);
-      outline-offset: 3px;
+      outline-offset: 4px;
+      border-radius: 4px;
     }
 
-    .tile:active { transform: translateY(1px); }
-
-    .tile svg { width: 34px; height: 34px; display: block; }
-
-    .tile-name { font-size: 14px; font-weight: 600; }
+    .social-icon svg { width: 30px; height: 30px; display: block; }
 
     .link {
       position: relative;
@@ -262,12 +250,11 @@
       .serpent-banner { margin-bottom: 28px; }
       .intro { grid-template-columns: 1fr; gap: 18px; align-items: start; }
       .link { min-height: 90px; padding-left: 17px; gap: 13px; }
-      .tiles { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .link { transition: none; }
-      .tile { transition: none; }
+      .social-icon { transition: none; }
     }
   </style>
 </head>
@@ -287,22 +274,18 @@
                 <nav aria-label="Paquiliztli's links">
       <section class="category">
         <h2 class="cat-title">Follow Me</h2>
-        <div class="tiles">
-          <a class="tile" href="https://www.instagram.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <div class="social-row">
+          <a class="social-icon" href="https://www.instagram.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg>
-            <span class="tile-name">Instagram</span>
           </a>
-          <a class="tile" href="https://www.tiktok.com/@paquiliztli1" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <a class="social-icon" href="https://www.tiktok.com/@paquiliztli1" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.2 1.9 3.7 4.1 4v3c-1.6 0-3.1-.5-4.4-1.3v6.1c0 3.9-2.7 6.3-6.1 6.3-3.2 0-5.8-2.4-5.8-5.6 0-3.3 2.9-5.8 6.4-5.5v3.1c-1.7-.3-3.2.8-3.2 2.4 0 1.4 1.1 2.5 2.6 2.5 1.6 0 2.9-1.2 2.9-3V3h3.5Z"/></svg>
-            <span class="tile-name">TikTok</span>
           </a>
-          <a class="tile" href="https://YouTube.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <a class="social-icon" href="https://YouTube.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.9-.5-5.6a2.9 2.9 0 0 0-2-2C18.7 4 12 4 12 4s-6.7 0-8.5.4a2.9 2.9 0 0 0-2 2C1 8.1 1 12 1 12s0 3.9.5 5.6a2.9 2.9 0 0 0 2 2c1.8.4 8.5.4 8.5.4s6.7 0 8.5-.4a2.9 2.9 0 0 0 2-2c.5-1.7.5-5.6.5-5.6Z"/><path fill="var(--item-bg)" d="M9.8 15.6V8.4L15.8 12l-6 3.6Z"/></svg>
-            <span class="tile-name">YouTube</span>
           </a>
-          <a class="tile" href="https://www.facebook.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a class="social-icon" href="https://www.facebook.com/paquiliztli" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21.9v-7.2h2.4l.4-2.9h-2.8V9.9c0-.8.3-1.4 1.5-1.4h1.4V5.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.5H8.5v2.9H11v7.2h2.5Z"/></svg>
-            <span class="tile-name">Facebook</span>
           </a>
         </div>
       </section>
