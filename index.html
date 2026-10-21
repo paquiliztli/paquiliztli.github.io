@@ -102,9 +102,29 @@
     }
 
     .links {
-      margin-top: 24px;
       display: grid;
       gap: 12px;
+    }
+
+    .category { margin-top: 32px; }
+
+    .cat-title {
+      margin: 0 0 13px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .cat-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
     }
 
     .link {
@@ -150,9 +170,9 @@
       line-height: 1.25;
     }
 
-    .link:nth-child(1) .link-number { background: var(--todo); }
-    .link:nth-child(2) .link-number { background: var(--progress); }
-    .link:nth-child(3) .link-number { background: var(--done); }
+    .link:nth-child(3n+1) .link-number { background: var(--todo); }
+    .link:nth-child(3n+2) .link-number { background: var(--progress); }
+    .link:nth-child(3n) .link-number { background: var(--done); }
 
     .link-copy { min-width: 0; }
 
@@ -223,39 +243,160 @@
       </div>
     </section>
 
-    <nav class="links" aria-label="Paquiliztli's links">
-      <a class="link" href="https://YouTube.com/paquiliztli" target="_blank" rel="noopener noreferrer">
-        <span class="link-number" aria-hidden="true">01</span>
-        <span class="link-copy">
-          <span class="link-title">YouTube</span>
-          <span class="link-note">Watch my videos and crochet work</span>
-        </span>
-        <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
-        </svg>
-      </a>
+        <nav aria-label="Paquiliztli's links">
+      <section class="category">
+        <h2 class="cat-title">Follow Me</h2>
+        <div class="links">
+          <a class="link" href="https://www.instagram.com/paquiliztli" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">01</span>
+            <span class="link-copy">
+              <span class="link-title">Instagram</span>
+              <span class="link-note">Follow my crochet, Nahuatl lessons and daily life</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://www.tiktok.com/@paquiliztli1" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">02</span>
+            <span class="link-copy">
+              <span class="link-title">TikTok</span>
+              <span class="link-note">Short Nahuatl lessons and crochet clips</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://YouTube.com/paquiliztli" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">03</span>
+            <span class="link-copy">
+              <span class="link-title">YouTube</span>
+              <span class="link-note">Watch my videos and crochet work</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+        </div>
+      </section>
 
-      <a class="link" href="https://voyagela.com/interview/conversations-with-diego-juarez-viveros?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAdGRleAUv_6JleHRuA2FlbQIxMQABp9wtnZlhehRixGaNdi1H57fXB2Q07C-eptwYriEeky1Ecz1uHNYaIOlsyxhm_aem_amef53HXrU8s2oU_uWW-Zg" target="_blank" rel="noopener noreferrer">
-        <span class="link-number" aria-hidden="true">02</span>
-        <span class="link-copy">
-          <span class="link-title">Voyage LA interview</span>
-          <span class="link-note">Read my conversation with VoyageLA</span>
-        </span>
-        <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
-        </svg>
-      </a>
+      <section class="category">
+        <h2 class="cat-title">Learn &amp; Support</h2>
+        <div class="links">
+          <a class="link" href="https://www.udemy.com/course/tapestrycrochet/" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">04</span>
+            <span class="link-copy">
+              <span class="link-title">Udemy Course</span>
+              <span class="link-note">Fundamentals of Tapestry Crochet for Colorful Art</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://docs.google.com/document/d/1gGmSWfVS0dE30k9icqf05ZJriKY1gbcU/edit" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">05</span>
+            <span class="link-copy">
+              <span class="link-title">Nahuatl Language Resources</span>
+              <span class="link-note">Explore Nahuatl language resources</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://www.patreon.com/paquiliztli" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">06</span>
+            <span class="link-copy">
+              <span class="link-title">Patreon</span>
+              <span class="link-note">Support my art and teaching</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+        </div>
+      </section>
 
-      <a class="link" href="https://docs.google.com/document/d/1gGmSWfVS0dE30k9icqf05ZJriKY1gbcU/edit" target="_blank" rel="noopener noreferrer">
-        <span class="link-number" aria-hidden="true">03</span>
-        <span class="link-copy">
-          <span class="link-title">Nahuatl Language Resources</span>
-          <span class="link-note">Explore Nahuatl language resources</span>
-        </span>
-        <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
-        </svg>
-      </a>
+      <section class="category">
+        <h2 class="cat-title">Press &amp; Interviews</h2>
+        <div class="links">
+          <a class="link" href="https://voyagela.com/interview/conversations-with-diego-juarez-viveros?utm_source=ig&amp;utm_medium=social&amp;utm_content=link_in_bio&amp;fbclid=PAdGRleAUv_6JleHRuA2FlbQIxMQABp9wtnZlhehRixGaNdi1H57fXB2Q07C-eptwYriEeky1Ecz1uHNYaIOlsyxhm_aem_amef53HXrU8s2oU_uWW-Zg" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">07</span>
+            <span class="link-copy">
+              <span class="link-title">Voyage LA interview</span>
+              <span class="link-note">Read my conversation with VoyageLA</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://remezcla.com/features/culture/diego-viveros-crochet-aztec-artist/" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">08</span>
+            <span class="link-copy">
+              <span class="link-title">Remezcla</span>
+              <span class="link-note">Interview — my crochet art and cultural roots</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://furlscrochet.com/blogs/crochet-maker-stories/pride-month-maker-stories-a-paquiliztli" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">09</span>
+            <span class="link-copy">
+              <span class="link-title">Furls Crochet</span>
+              <span class="link-note">Pride Month Maker Stories interview</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://www.tapestrycrochet.com/blog/?p=3008" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">10</span>
+            <span class="link-copy">
+              <span class="link-title">Tapestry Crochet</span>
+              <span class="link-note">&#8216;An Extraordinary Man&#8217; — artist profile</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://www.elcomalitocollective.com/march-2017-exhibit.html" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">11</span>
+            <span class="link-copy">
+              <span class="link-title">El Comalito Collective</span>
+              <span class="link-note">My March 2017 exhibit feature</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="category">
+        <h2 class="cat-title">Podcast Appearances</h2>
+        <div class="links">
+          <a class="link" href="https://open.spotify.com/episode/2cM8paoQfOMpsYymxsupGp" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">12</span>
+            <span class="link-copy">
+              <span class="link-title">Two Spirit Warrior Podcast</span>
+              <span class="link-note">&#8216;Weaving Identity: The Art of Diego JV Paquiliztli&#8217; on Spotify</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+          <a class="link" href="https://podcasts.apple.com/us/podcast/2-esfps-w-phd-doctorate-degrees-feat-a-paquiliztli/id1515997831?i=1000529295210&amp;uo=4" target="_blank" rel="noopener noreferrer">
+            <span class="link-number" aria-hidden="true">13</span>
+            <span class="link-copy">
+              <span class="link-title">Type Talks</span>
+              <span class="link-note">Guest episode — 2 ESFPs with doctorates</span>
+            </span>
+            <svg class="arrow" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 24 24 8M12 8h12v12" stroke="currentColor" stroke-width="2.3" stroke-linecap="square" stroke-linejoin="miter" />
+            </svg>
+          </a>
+        </div>
+      </section>
     </nav>
 
     <footer>Made one stitch at a time</footer>
