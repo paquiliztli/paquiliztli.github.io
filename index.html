@@ -61,21 +61,18 @@
 
     .serpent-banner {
       position: relative;
-      height: 132px;
       margin-bottom: 34px;
       overflow: hidden;
-      background:
-        radial-gradient(ellipse 520px 90px at 50% 115%, rgba(20, 184, 166, .16), transparent 70%),
-        var(--bg-alt);
+      background: #000000;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow-soft);
     }
 
-    .serpent-banner svg {
+    .serpent-banner img {
       display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     .intro {
@@ -203,7 +200,7 @@
 
     @media (max-width: 520px) {
       .page { justify-content: flex-start; }
-      .serpent-banner { height: 104px; margin-bottom: 28px; }
+      .serpent-banner { margin-bottom: 28px; }
       .intro { grid-template-columns: 1fr; gap: 18px; align-items: start; }
       .link { min-height: 90px; padding-left: 17px; gap: 13px; }
     }
@@ -216,65 +213,7 @@
 <body>
   <main class="page">
     <div class="serpent-banner" aria-hidden="true">
-      <svg viewBox="0 0 760 132" preserveAspectRatio="xMidYMid meet" fill="none" role="presentation">
-        <!-- Teal horizontal Quetzalcoatl — feathered serpent -->
-        <!-- Tail feather plume (left) -->
-        <g stroke-linecap="round" stroke-linejoin="round">
-          <path d="M58 78 C30 62 14 44 10 22 C28 28 44 46 52 66 Z" fill="#0f766e" stroke="#14b8a6" stroke-width="2"/>
-          <path d="M60 84 C30 80 12 70 2 54 C22 52 42 62 56 74 Z" fill="#115e59" stroke="#2dd4bf" stroke-width="2"/>
-          <path d="M62 72 C44 50 40 32 44 12 C58 26 64 48 64 66 Z" fill="#14b8a6" stroke="#5eead4" stroke-width="2"/>
-        </g>
-        <!-- Sinuous body -->
-        <path d="M56 76 C 104 76, 118 40, 168 40 C 218 40, 232 76, 282 76 C 332 76, 346 40, 396 40 C 446 40, 460 76, 510 76 C 560 76, 574 44, 620 42" stroke="#0d9488" stroke-width="30" stroke-linecap="round" fill="none"/>
-        <path d="M56 76 C 104 76, 118 40, 168 40 C 218 40, 232 76, 282 76 C 332 76, 346 40, 396 40 C 446 40, 460 76, 510 76 C 560 76, 574 44, 620 42" stroke="#14b8a6" stroke-width="22" stroke-linecap="round" fill="none"/>
-        <!-- Belly highlight -->
-        <path d="M62 84 C 106 84, 122 52, 168 52 C 214 52, 230 84, 282 84 C 334 84, 350 52, 396 52 C 442 52, 458 84, 510 84 C 556 84, 574 54, 614 50" stroke="#5eead4" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/>
-        <!-- Scale arcs along the body -->
-        <g stroke="#04201c" stroke-width="2" opacity=".38" fill="none" stroke-linecap="round">
-          <path d="M92 62 a10 10 0 0 1 14 8"/><path d="M128 48 a10 10 0 0 1 14 8"/>
-          <path d="M196 52 a10 10 0 0 1 14 8"/><path d="M238 66 a10 10 0 0 1 14 8"/>
-          <path d="M324 50 a10 10 0 0 1 14 8"/><path d="M368 48 a10 10 0 0 1 14 8"/>
-          <path d="M452 54 a10 10 0 0 1 14 8"/><path d="M492 68 a10 10 0 0 1 14 8"/>
-          <path d="M540 62 a10 10 0 0 1 14 8"/><path d="M574 50 a10 10 0 0 1 12 6"/>
-        </g>
-        <!-- Back feathers along the crests -->
-        <g fill="#2dd4bf" stroke="#99f6e4" stroke-width="1.6" stroke-linejoin="round">
-          <path d="M150 30 C142 16 144 6 150 0 C158 10 160 20 156 32 Z"/>
-          <path d="M172 28 C172 13 178 4 186 0 C190 12 188 24 180 32 Z"/>
-          <path d="M378 30 C370 16 372 6 378 0 C386 10 388 20 384 32 Z"/>
-          <path d="M400 28 C400 13 406 4 414 0 C418 12 416 24 408 32 Z"/>
-          <path d="M258 66 C250 54 246 44 248 34 C258 42 264 52 264 64 Z"/>
-          <path d="M486 66 C478 54 474 44 476 34 C486 42 492 52 492 64 Z"/>
-        </g>
-        <!-- Head (right, facing right) -->
-        <g stroke-linejoin="round" stroke-linecap="round">
-          <!-- Feather crest fanning back from the head -->
-          <path d="M638 34 C622 16 606 8 588 8 C600 24 616 34 634 40 Z" fill="#0f766e" stroke="#2dd4bf" stroke-width="2"/>
-          <path d="M646 26 C638 6 628 -2 612 -6 C618 12 630 24 644 32 Z" fill="#14b8a6" stroke="#5eead4" stroke-width="2" transform="translate(14 8)"/>
-          <path d="M652 30 C652 10 658 -2 670 -10 C676 8 672 24 660 34 Z" fill="#2dd4bf" stroke="#99f6e4" stroke-width="2" transform="translate(2 10)"/>
-          <!-- Skull -->
-          <path d="M614 58 C614 36 632 22 656 22 C678 22 692 34 696 50 L728 58 C734 60 734 68 728 70 L698 74 C694 90 680 100 658 100 C632 100 614 84 614 58 Z" fill="#14b8a6" stroke="#5eead4" stroke-width="2.5"/>
-          <!-- Snout / jaw -->
-          <path d="M696 72 L730 78 C736 79 736 88 730 89 L690 90" fill="#0d9488" stroke="#5eead4" stroke-width="2"/>
-          <path d="M706 60 l6 8 M718 62 l5 8" stroke="#04201c" stroke-width="2" opacity=".5"/>
-          <!-- Teeth -->
-          <path d="M700 70 l4 7 4-6 M716 72 l4 7 4-6" stroke="#ecfeff" stroke-width="2" fill="none"/>
-          <!-- Forked tongue -->
-          <path d="M730 84 C742 86 748 82 754 76 M730 84 C740 88 748 88 756 90" stroke="#ec4899" stroke-width="2.5" fill="none"/>
-          <!-- Eye -->
-          <circle cx="664" cy="48" r="10" fill="#facc15" stroke="#04201c" stroke-width="2"/>
-          <circle cx="666" cy="48" r="4.5" fill="#050505"/>
-          <circle cx="668" cy="45" r="1.6" fill="#ffffff"/>
-          <!-- Nostril + brow ridge -->
-          <circle cx="706" cy="52" r="2.4" fill="#04201c" opacity=".65"/>
-          <path d="M648 34 C658 28 674 28 684 34" stroke="#04201c" stroke-width="2.5" opacity=".35" fill="none"/>
-          <!-- Ear / conch ornament -->
-          <circle cx="636" cy="66" r="9" fill="#0f766e" stroke="#facc15" stroke-width="2.5"/>
-          <circle cx="636" cy="66" r="3.5" fill="#facc15"/>
-        </g>
-        <!-- Rattle / tail tip accent dots -->
-        <g fill="#14b8a6" opacity=".9"><circle cx="18" cy="112" r="2"/><circle cx="42" cy="118" r="2"/><circle cx="716" cy="116" r="2"/><circle cx="740" cy="110" r="2"/></g>
-      </svg>
+      <img src="serpent.webp" alt="" />
     </div>
 
     <section class="intro" aria-labelledby="name">
